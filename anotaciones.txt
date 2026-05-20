@@ -1,0 +1,23 @@
+PROMPT:
+
+Genera una pagina web en streamlit desde GitHub con estilo de Netflix y que tenga un diseño moderno. Esta pagina contiene un modelo entrenado para la clasificacion de la etiqueta (Movie o TV Show) en funcion de su tiempo de duracion. Temgp 2 modelos generados por joblib, uno se llama logistic_regression_model.pkl y el otro se llama random_forrest_model.pkl. Ambos están almacenados en una carpeta modelos. En la parte superior izquierda de la pagina quiero que aparezca mi Nombre: Sheila y codigo: 40558361. Debajo el link colab:https://colab.research.google.com/drive/1lZCBEIANlynDQTNQnJ-Y3Mdz0P1i9bSm#scrollTo=qc570ki3CBhG
+
+Quiero que el usuario ingrese los datos de las siguientes columnas:
+
+- Title
+
+
+- Director
+
+
+- Country
+
+
+- Release year
+
+
+- Duration
+
+Tener en cuenta que el target se llama "type".
+Finalmente agrega un boton para obtener la predicción.
+
