@@ -129,13 +129,29 @@ with st.container():
         value=2020
     )
     
-    duration = st.number_input(
-        "⏳ Duration",
-        min_value=1,
-        max_value=500,
-        value=90
+    # 🌟 NUEVO: Preguntar primero qué tipo de contenido es para que sea claro
+    tipo_form = st.radio(
+        "¿Qué tipo de contenido desea simular?",
+        ("Película (Se mide en minutos)", "Serie de TV (Se mide en temporadas)")
     )
-
+    
+    # 🌟 NUEVO: Adaptar el texto de la casilla de duración según la elección
+    if "Película" in tipo_form:
+        duration = st.number_input(
+            "⏳ Duración (en Minutos)",
+            min_value=1,
+            max_value=500,
+            value=90,
+            help="Ejemplo: 90 para una película estándar"
+        )
+    else:
+        duration = st.number_input(
+            "⏳ Duración (en Temporadas)",
+            min_value=1,
+            max_value=50,
+            value=1,
+            help="Ejemplo: 1 o 2 para las temporadas de una serie"
+        )
 # =========================
 # SELECCIÓN DE MODELO
 # =========================
