@@ -153,7 +153,7 @@ if st.button("🔮 Obtener Predicción"):
     # Solo usamos duration porque el modelo fue entrenado con duración
     
     input_data = pd.DataFrame({
-        "duration": [duration]
+        "duration_num": [duration]
     })
 
     # Seleccionar modelo
